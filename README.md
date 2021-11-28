@@ -1,58 +1,69 @@
-# `AWS/AMAZON-ECS-CLI` ZINIT PACKAGE
+<h3>
 
-## Homepage link: [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli)
+| **Package source:** | Source Tarball |            Binary            | Git | Node | Gem |
+| :-----------------: | :------------: | :--------------------------: | :-: | :--: | :-: |
+|     **Status:**     |      :x:       | :heavy_check_mark: (default) | :x: | :x:  | :x: |
 
-| **Package source:** | Source Tarball |      Binary      | Git | Node | Gem |
-|:-------------------:|:--------------:|:----------------:|:---:|:----:|:---:|
-|     **Status:**     |       -        | + <br> (default) |  -  |  –   |  –  |
+</h3>
 
-[Zinit](https://github.com/z-shell/zinit) can use the NPM package registry
-to automatically:
+- [Introduction](#introduction)
+- [Install](#install)
+	- [Available `pack''` invocations](#available-pack-invocations)
+	- [Default Profile](#default-profile)
+	- [`Bin-Gem-Node` Profile](#bin-gem-node-profile)
 
-- get the plugin's Git repository OR release-package URL,
-- get the list of the recommended ices for the plugin,
-  - there can be multiple lists of ices,
-  - the ice lists are stored in *profiles*; there's at least one profile, *default*,
-  - the ices can be selectively overriden.
+# Introduction
 
-Example invocations that'll install
-[aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli):
+> **[?]**
+> This repository not compatible with previous versions (zplugin, zinit).
+>
+> Please upgrade to [ZI](https://github.com/z-shell-zi)
+
+The [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli) zsh package than can use the NPM package registry to automatically:
+
+-   get the plugin's Git repository OR release-package URL,
+-   get the list of the recommended ices for the plugin,
+    -   there can be multiple lists of ices,
+    -   the ice lists are stored in _profiles_; there's at least one profile, _default_,
+    -   the ices can be selectively overridden.
+
+# Install
+
+## Available `pack''` invocations
 
 ```zsh
 # Download the binary of amazon-ecs-cli command
-zinit pack for ecs-cli
+zi pack for ecs-cli
 
 # Download the ecs-cli binary with use of the bin-gem-node annex
-zinit pack"bgn" for ecs-cli
+zi pack"bgn" for ecs-cli
 ```
 
 ## Default Profile
 
 Provides the CLI command `ecs-cli` by coping it to `$ZPFX/bin`.
 
-The Zinit command executed will be equivalent to:
+The ZI command executed will be equivalent to:
 
 ```zsh
-zinit as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
+zi as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
     atclone='chmod +x *; cp -vf ecs-cli $ZPFX/bin' \
     atpull="%atclone" sbin="ecs-cli" is-snippet for \
         https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-${(M)OSTYPE#(linux|darwin)}-amd64-latest
 ```
 
-## bin-gem-node Profile
+## `Bin-Gem-Node` Profile
 
-Provides the CLI command `ecs-cli` by creating a forwarder script (a *shim*) in
+Provides the CLI command `ecs-cli` by creating a forwarder script (a _shim_) in
 `$ZPFX/bin` by using the
 [bin-gem-node](https://github.com/z-shell/z-a-bin-gem-node) annex. It's the best
 method of providing the binary to the command line.
 
-The Zinit command executed will be equivalent to:
+The ZI command executed will be equivalent to:
 
 ```zsh
-zinit as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
+zi as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
     atclone="chmod +x *"  atpull="%atclone" sbin="ecs-cli"
     is-snippet for \
         https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-${(M)OSTYPE#(linux|darwin)}-amd64-latest
 ```
-
-<!-- vim:set ft=markdown tw=80 fo+=an1 autoindent: -->
