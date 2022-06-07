@@ -1,6 +1,6 @@
 <div align="center"><table><tr><td>
 <h1><a href="https://github.com/z-shell/zi">
-  <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="80" height="80" /></a>
+  <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px" /></a>
     ❮ ZI ❯ Package - Amazon ECS CLI </h1>
 <h3>
 
