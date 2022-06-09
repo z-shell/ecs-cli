@@ -1,16 +1,29 @@
-<div align="center"><table><tr><td>
-<h1><a href="https://github.com/z-shell/zi">
+<table align="center"><tr><td>
+  <p><h1 align="center"><a href="https://github.com/z-shell/zi">
   <img align="center" src="https://github.com/z-shell/zi/raw/main/docs/images/logo.svg" alt="Logo" width="60px" height="60px" /></a>
-    ❮ ZI ❯ Package - Amazon ECS CLI </h1>
-<h3>
-
-| **Package source:** | Source Tarball |            Binary            | Git | Node | Gem |
-| :-----------------: | :------------: | :--------------------------: | :-: | :--: | :-: |
-|     **Status:**     |      :x:       | :heavy_check_mark: (default) | :x: | :x:  | :x: |
-
-</h3>
+    ❮ ZI ❯ Package - Amazon ECS CLI </p>
+</h1>
+<h3 align="center">
+<table>
+    <tr>
+        <td><b>Package source:</b></td>
+        <td>Source Tarball</td>
+        <td>Binary</td>
+        <td>Git</td>
+        <td>Node</td>
+        <td>Gem</td>
+    </tr>
+    <tr>
+        <td><b>Status:</b></td>
+        <td>❌</td>
+        <td>✔️ (default)</td>
+        <td>❌</td>
+        <td>❌</td>
+        <td>❌</td>
+    </tr>
+</table></h3>
 <!--  <p><img align="center" src="https://user-images.githubusercontent.com/59910950/172339363-8a890ff1-5db7-4aa7-a674-77b72663cbcd.png" alt="zi apr package" width="100%" height="auto" /></p> -->
-</td></tr></table></div>
+</td></tr></table>
 
 ## Available `pack''` invocations
 
@@ -54,7 +67,7 @@ zi as=null id-as="ecs-cli" mv="*latest -> ecs-cli" \
 
 > This repository compatible with [ZI](https://github.com/z-shell/zi)
 
-The [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli) zsh package than [zsh-string-lib](https://github.com/z-shell/zsh-string-lib) to automatically:
+The [aws/amazon-ecs-cli](https://github.com/aws/amazon-ecs-cli) zsh package that uses the [zsh-string-lib](https://github.com/z-shell/zsh-string-lib) to automatically:
 
 - get the plugin's Git repository OR release-package URL,
 - get the list of the recommended ices for the plugin,
