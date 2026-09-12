@@ -18,10 +18,7 @@
   },
   "zsh-data": {
     "plugin-info": {
-      "user": "aws",
-      "plugin": "amazon-ecs-cli",
       "url": "https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-${(M)OSTYPE#(linux|darwin)}-amd64-latest",
-      "version": "1.21.0",
       "message": "A snippet providing The Amazon ECS CLI, i.e.: the `ecs-cli' command."
     },
     "zi-ices": {
